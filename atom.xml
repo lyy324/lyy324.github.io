@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>李亚宇</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <id>https://lyy324.github.io/</id>
+  <link href="https://lyy324.github.io/" rel="alternate"/>
+  <link href="https://lyy324.github.io/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, 李亚宇</rights>
+  <subtitle>Unity / C# 技术笔记</subtitle>
+  <title>Mr. Li's blog</title>
+  <updated>2026-11-12T03:21:48.758Z</updated>
+  <entry>
+    <author>
+      <name>李亚宇</name>
+    </author>
+    <category term="编程语言" scheme="https://lyy324.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="CSharp" scheme="https://lyy324.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/CSharp/"/>
+    <category term="C#" scheme="https://lyy324.github.io/tags/C/"/>
+    <category term="语法" scheme="https://lyy324.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    <content>
+      <![CDATA[<h2 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型"></a>1.1 数据类型</h2><p>C# 是强类型语言，常用类型包括值类型和引用类型：</p><ul><li>值类型：<code>int</code>、<code>float</code>、<code>bool</code>、<code>struct</code></li><li>引用类型：<code>class</code>、<code>string</code>、数组</li></ul><div class="note info flat"><p>值类型分配在栈上，复制时拷贝整个值；引用类型分配在堆上，复制的只是引用地址。</p></div><h2 id="1-2-方法定义"><a href="#1-2-方法定义" class="headerlink" title="1.2 方法定义"></a>1.2 方法定义</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Calculator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 两个整数相加</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Add</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="1-3-属性"><a href="#1-3-属性" class="headerlink" title="1.3 属性"></a>1.3 属性</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Player</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 私有字段</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> _hp;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 公开属性，带访问控制</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> Hp</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span> =&gt; _hp;</span><br><span class="line">        <span class="keyword">set</span> =&gt; _hp = Math.Clamp(<span class="keyword">value</span>, <span class="number">0</span>, <span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a>1.4 总结</h2><ul><li>值类型存栈，引用类型存堆</li><li>属性是字段的安全访问方式</li><li>后续文章会继续介绍泛型、委托、LINQ 等内容</li></ul>]]>
+    </content>
+    <id>https://lyy324.github.io/posts/1.CSharp%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://lyy324.github.io/posts/1.CSharp%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    <published>2026-11-12T02:00:00.000Z</published>
+    <summary>梳理 C# 数据类型、方法与属性的基础语法</summary>
+    <title>1.CSharp语法基础</title>
+    <updated>2026-11-12T03:21:48.758Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>李亚宇</name>
+    </author>
+    <category term="游戏引擎" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    <category term="Unity" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
+    <category term="Unity进阶UniTask" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/Unity%E8%BF%9B%E9%98%B6UniTask/"/>
+    <category term="Unity" scheme="https://lyy324.github.io/tags/Unity/"/>
+    <category term="UniTask" scheme="https://lyy324.github.io/tags/UniTask/"/>
+    <category term="异步" scheme="https://lyy324.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
+    <content>
+      <![CDATA[<h2 id="1-1-为什么用-UniTask"><a href="#1-1-为什么用-UniTask" class="headerlink" title="1.1 为什么用 UniTask"></a>1.1 为什么用 UniTask</h2><p>Unity 原生的 <code>async/await</code> 基于 <code>Task</code>，会产生 GC 分配。UniTask 使用结构体 + 对象池，在异步场景下几乎零 GC，更适合游戏高频逻辑。</p><div class="note warning flat"><p>使用 UniTask 时务必传入 <code>CancellationToken</code>，否则物体销毁后异步任务仍在执行，会造成内存泄漏。</p></div><h2 id="1-2-基础用法"><a href="#1-2-基础用法" class="headerlink" title="1.2 基础用法"></a>1.2 基础用法</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Cysharp.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UniTaskDemo</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">async</span> UniTaskVoid <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;等待 1 秒&quot;</span>);</span><br><span class="line">        <span class="keyword">await</span> UniTask.Delay(<span class="number">1000</span>);</span><br><span class="line">        Debug.Log(<span class="string">&quot;1 秒到了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="1-3-异步等待按钮点击"><a href="#1-3-异步等待按钮点击" class="headerlink" title="1.3 异步等待按钮点击"></a>1.3 异步等待按钮点击</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ButtonDemo</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">SerializeField</span>] Button _button;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">async</span> UniTaskVoid <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 等待一次按钮点击，销毁时自动取消</span></span><br><span class="line">        <span class="keyword">var</span> token = <span class="keyword">this</span>.GetCancellationTokenOnDestroy();</span><br><span class="line">        <span class="keyword">await</span> _button.OnClickAsync(token);</span><br><span class="line">        Debug.Log(<span class="string">&quot;按钮被点击了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="1-4-注意事项"><a href="#1-4-注意事项" class="headerlink" title="1.4 注意事项"></a>1.4 注意事项</h2><ol><li>必须传入 <code>CancellationToken</code>，物体销毁时取消任务</li><li>轮询场景可以用 <code>UniTask.WaitUntil</code> 替代协程</li><li>不支持 <code>await</code> 的地方，可以用 <code>UniTaskVoid</code> 启动</li></ol>]]>
+    </content>
+    <id>https://lyy324.github.io/posts/1.UniTask%E5%85%A5%E9%97%A8/</id>
+    <link href="https://lyy324.github.io/posts/1.UniTask%E5%85%A5%E9%97%A8/"/>
+    <published>2026-11-12T01:30:00.000Z</published>
+    <summary>为什么用 UniTask，以及异步延迟、按钮点击的基础写法</summary>
+    <title>1.UniTask入门</title>
+    <updated>2026-11-12T03:21:44.741Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>李亚宇</name>
+    </author>
+    <category term="游戏引擎" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    <category term="Unity" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
+    <category term="Unity基础" scheme="https://lyy324.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/Unity%E5%9F%BA%E7%A1%80/"/>
+    <category term="Unity" scheme="https://lyy324.github.io/tags/Unity/"/>
+    <category term="游戏引擎" scheme="https://lyy324.github.io/tags/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    <content>
+      <![CDATA[<h2 id="1-1-Unity-是什么"><a href="#1-1-Unity-是什么" class="headerlink" title="1.1 Unity 是什么"></a>1.1 Unity 是什么</h2><p>Unity 是一款跨平台的游戏引擎，支持 2D &#x2F; 3D 游戏开发，一次开发可以发布到 Windows、Android、iOS、WebGL 等多个平台。</p><div class="note info flat"><p>Unity 采用 <strong>GameObject + Component</strong> 的组件化设计，所有物体都是 GameObject，功能通过挂载组件实现。</p></div><h2 id="1-2-核心模块"><a href="#1-2-核心模块" class="headerlink" title="1.2 核心模块"></a>1.2 核心模块</h2><table><thead><tr><th>模块</th><th>作用</th></tr></thead><tbody><tr><td>GameObject</td><td>场景中所有物体的基类</td></tr><tr><td>Component</td><td>挂在 GameObject 上的功能组件</td></tr><tr><td>Transform</td><td>控制物体的位置、旋转、缩放</td></tr><tr><td>MonoBehaviour</td><td>脚本的基类，提供生命周期函数</td></tr></tbody></table><h2 id="1-3-第一个脚本"><a href="#1-3-第一个脚本" class="headerlink" title="1.3 第一个脚本"></a>1.3 第一个脚本</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">HelloUnity</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 游戏开始时调用一次</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;Hello Unity!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每一帧调用</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 让物体绕 Y 轴旋转</span></span><br><span class="line">        transform.Rotate(Vector3.up, <span class="number">90f</span> * Time.deltaTime);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a>1.4 总结</h2><div class="note success flat"><ul><li>GameObject + Component 是 Unity 的核心设计</li><li><code>Start</code> 处理初始化，<code>Update</code> 处理每帧逻辑</li><li><code>Time.deltaTime</code> 用来消除不同帧率带来的速度差异</li></ul></div>]]>
+    </content>
+    <id>https://lyy324.github.io/posts/1.Unity%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/</id>
+    <link href="https://lyy324.github.io/posts/1.Unity%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/"/>
+    <published>2026-11-12T01:00:00.000Z</published>
+    <summary>了解 Unity 的核心设计，写出第一个 MonoBehaviour 脚本</summary>
+    <title>1.Unity基础概述</title>
+    <updated>2026-11-12T03:21:39.872Z</updated>
+  </entry>
+</feed>
