@@ -1,0 +1,143 @@
+/* ============================================================
+   自定义美化样式（在 Butterfly 基础上增强，自动适配深浅色）
+   ============================================================ */
+
+/* ---------- 卡片：柔和阴影 + 悬停上浮 ---------- */
+#recent-posts .recent-post-item,
+#aside-content .card-widget,
+.layout .pagination > :not(.space) {
+  box-shadow: 0 6px 22px rgba(17, 24, 39, 0.08);
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+#recent-posts .recent-post-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(17, 24, 39, 0.16);
+}
+
+#aside-content .card-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.14);
+}
+
+/* ---------- 封面图：悬停缓慢放大 ---------- */
+.post_cover {
+  overflow: hidden;
+}
+
+.post_cover .post-bg {
+  transition: transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.recent-post-item:hover .post-bg {
+  transform: scale(1.08);
+}
+
+/* ---------- 文章标题 ---------- */
+.article-title {
+  transition: color 0.25s ease;
+  background-image: none;
+}
+
+.article-title:hover {
+  color: var(--theme-color);
+}
+
+/* ---------- 头像圆形 ---------- */
+#aside-content .avatar-img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#aside-content .avatar-img img {
+  border-radius: 50%;
+}
+
+/* ---------- 侧边栏 Follow Me 按钮渐变 ---------- */
+#aside-content .card-author-btns button,
+#aside-content .card-author-btns a,
+.card-widget .button {
+  background: linear-gradient(135deg, var(--theme-color), var(--btn-hover, var(--theme-color)));
+  border: none;
+  border-radius: 8px;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+#aside-content .card-author-btns button:hover,
+#aside-content .card-author-btns a:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+/* ---------- 标签云圆角 ---------- */
+#aside-content .card-tag-cloud a {
+  border-radius: 6px;
+  padding: 2px 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#aside-content .card-tag-cloud a:hover {
+  transform: translateY(-2px);
+  background: rgba(67, 97, 238, 0.12);
+}
+
+/* ---------- 正文链接下划线动效 ---------- */
+#article-container a {
+  background-image: linear-gradient(var(--theme-color), var(--theme-color));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+#article-container a:hover {
+  background-size: 100% 2px;
+}
+
+/* ---------- 代码块更精致 ---------- */
+#article-container figure.highlight,
+#article-container pre {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--theme-color), var(--paginator, var(--theme-color)));
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 选中文本 ---------- */
+::selection {
+  background: var(--theme-color);
+  color: #fff;
+}
+
+/* ---------- 深色模式阴影适配 ---------- */
+[data-theme='dark'] #recent-posts .recent-post-item,
+[data-theme='dark'] #aside-content .card-widget,
+[data-theme='dark'] .layout .pagination > :not(.space) {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme='dark'] #recent-posts .recent-post-item:hover {
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme='dark'] #article-container figure.highlight,
+[data-theme='dark'] #article-container pre {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
